@@ -1,0 +1,148 @@
+<h1 align="center">Censo de Bolumbia para Habitantes y Viviendas - Página 2</h1>
+
+<div class="row">
+    <div align="center" class="column">
+        <button onCLick=" window.location.href='/' ">Regresar al Inicio</button>
+      </div>
+      <div align="center" class="column">
+        <img src="https://typography.guru/uploads/monthly_2018_02/Census_StatsNZ_Purple_RGB.png.72094b9dc27e17f141bf83a02581d869.png" height="220" width="400">
+      </div>
+      <div align="center" class="column">
+        <button value="HelpDesk" onclick="window.open('http://google.com')">HelpDesk </button>
+      </div>
+  </div>
+
+<div class="row">
+
+        <div class="column">
+            <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+                <div id="P13" class="bloque1">
+                <label>13. Marque todos los espacios que requiera</label>
+                <p>¿En cuáles idiomas podría usted tener una conversación fluida?</p>
+                <input formControlName="InglesCheck" class="idiomas" type="checkbox" name="InglesCheck" value="Inglés">Inglés<br>
+                <input formControlName="EspanolCheck" class="idiomas" type="checkbox" name="EspanolCheck" value="Español">Español<br>
+                <input formControlName="FrancesCheck" class="idiomas" type="checkbox" name="FrancesCheck" value="Francés">Francés<br>
+                <input formControlName="PortuguesCheck" class="idiomas" type="checkbox" name="PortuguesCheck" value="Portugues">Portugues<br>
+                <label class="idiomas">Otro(s) (Ejemplo: Alemán, Ruso). Escríbalos separados por
+                    comas en caso de ser más de uno:</label>
+                <input formControlName="OtherLanguages" class="idiomas" type="text" name="IdiomaCampo" value=""><br>
+                <input formControlName="NoLanguage" class="idiomas" type="checkbox" name="NoneCheck" value="none">Ninguno<br><br>
+                </div>
+                <div> -</div>
+                <div id="P14" class="bloque1">
+                    <label>14. ¿Es usted de descendencia indígena??</label>
+                    <p>(Tiene un pariente indígena ya sea padres, abuelos etc...) </p>
+                    <input formControlName="SiIndioCheck" class="indigena" type="checkbox" name="SiIndioCheck" value="yes">Sí<br>
+                    <input formControlName="NoIndioCheck" class="indigena" type="checkbox" name="NoIndioCheck" value="no">No<br>
+                    <input formControlName="NoSabeIndioCheck" class="indigena" type="checkbox" name="NoSabeIndioCheck" value="don't know">No
+                    lo sé
+                    <br><br>
+                </div>
+            </form>
+        </div>
+
+        <div class="column">
+                <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+                        
+                        <div id="P15" class="bloque1">
+                            <label>15. ¿Sabe usted el nombre y la localización de la tribu indígena mencionada en la pregunta 14?</label><br>
+                            <input formControlName="SiTribuCheck" class="tribu" type="checkbox" name="SiTribuCheck" value="yes">Sí<br>
+                            <input formControlName="NoTribuCheck" class="tribu" type="checkbox" name="NoTribuCheck" value="no">No<br>
+                            <p>En caso de responder "Sí", especifique el nombre de dicha tribu:</p>
+                            <input formControlName="TribuNombreCampo" class="tribu" type="text" name="TribuNombreCampo" value=""><br>
+                            <p>En caso de responder "Sí", especifique la localización de dicha tribu:</p>
+                            <input formControlName="TribuLugarCampo" class="tribu" type="text" name="TribuLugarCampo" value=""><br><br>
+                        </div>
+                        <div> -</div>
+                <div id="P16" class="bloque1">
+                    <label>16. Marque todos los espacios que requiera</label>
+                    <p>¿Tiene usted un problema o condición médica (que dure 6 meses o más)?</p>
+                    <input formControlName="VistaCheck" class="discapacidad" type="checkbox" name="VistaCheck" value="Sight">Vista
+                    (incluyendo cuando usa lentes)<br>
+                    <input formControlName="EscuchaCheck" class="discapacidad" type="checkbox" name="EscuchaCheck" value="Hearing">Escucha
+                    (incluyendo cuando usa ayudas auditivas)<br>
+                    <input formControlName="CaminarCheck" class="discapacidad" type="checkbox" name="CaminarCheck" value="Walking">Caminar,
+                    cargar o agacharse<br>
+                    <input formControlName="ManosCheck" class="discapacidad" type="checkbox" name="ManosCheck" value="Holding">Usar
+                    las manos para agarrar, sostener o usar objetos<br>
+                    <input formControlName="AprendizajeCheck" class="discapacidad" type="checkbox" name="AprendisajeCheck" value="Learning">Aprendizaje,
+                    concentración o memoria<br>
+                    <input formControlName="ComunicarCheck" class="discapacidad" type="checkbox" name="ComunicarCheck" value="Communicating">Comunicación,
+                    socialización <br>
+                    <input formControlName="NingunaCheck" class="discapacidad" type="checkbox" name="NingunaCheck" value="None">Ninguna
+                    <br><br>
+                </div>
+            </form>
+        </div>
+
+        <div class="column">
+                <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+                        <div id="P17" class="bloque1">
+                            <label></label>
+                            <p>17. ¿Tiene usted alguna discapicidad (que dure 6 meses o mas) que le impida hacer cosas diarias que otros
+                                hacen?</p>
+                            <input formControlName="SiDiscapacidadCheck" class="discapacitado" type="checkbox" name="SiDiscapacidadCheck"
+                                value="yes">Sí
+                            <br>
+                            <input formControlName="NoDiscapacidadCheck" class="discapacitado" type="checkbox" name="NoDiscapacidadCheck"
+                                value="no">No<br>
+                        </div>
+                        <div> -</div>
+                    <div id="P18" class="bloque1"><br>
+                        <label>18. ¿A cuál religión perteneces?</label><br><br>
+                        <select formControlName="religion">
+                            <option *ngFor="let religion of religions">{{ religion }}</option>
+                        </select>
+                        <br>
+                    </div>
+                    <div> -</div>
+                    <div id="P19" class="bloque1">
+                        <br>
+                        <label>19. Marque todos los espacios que requiera</label>
+                        <p>Seleccione las personas que viven en su casa</p>
+                        <input formControlName="marriedCheck" class="personas" type="checkbox" name="married" value="Espos@">Mi
+                        esposo/a legal<br>
+                        <input formControlName="freeUCheck" class="personas" type="checkbox" name="freeU" value="compUnion">Mi
+                        compañero/a de unión civil de sexo opuesto registrado legalmente<br>
+                        <input formControlName="freeUHomoCheck" class="personas" type="checkbox" name="freeUHomo" value="CompUnionHomo">Mi
+                        compañero/a de unión civil del mismo sexo registrado legalmente<br>
+                        <input formControlName="Boy(girl)friendCheck" class="personas" type="checkbox" name="Boy(girl)friend" value="Boy(girl)friend">Mi
+                        novio/a del sexo opuesto<br>
+                        <input formControlName="Boy(girl)friendHomoCheck" class="personas" type="checkbox" name="Boy(girl)friendHomo"
+                            value="Boy(girl)friendHomo">Mi novio/a del mismo sexo<br>
+                        <input formControlName="parentsCheck" class="personas" type="checkbox" name="parents" value="parents">Mi madre
+                        y/o padre<br>
+                        <input formControlName="son(s)/daughter(s)Check" class="personas" type="checkbox" name="son(s)/daughter(s)"
+                            value="son(s)/daughter(s)">Mi(s)
+                        hijo/a(s)<br>
+                        <input formControlName="brother(s)/sister(s)Check" class="personas" type="checkbox" name="brother(s)/sister(s)"
+                            value="brother(s)/sister(s)">Mi
+                        hermano/a<br>
+                        <input formControlName="flatmateCheck" class="personas" type="checkbox" name="flatmate" value="flatmate">Mi
+                        compañero de cuarto<br>
+                        <label class="othersCheck">Otro(s) (Ejemplo:
+                            Primo, Abuelo, Abuela). Escríbalos separados por comas en caso de ser más de uno:</label>
+                        <input formControlName="othersCheck" class="othersCheck" type="text" name="othersCheck" value=""><br>
+                        <input formControlName="AloneCheck" class="personas" type="checkbox" name="alone" value="alone">Nadie, vivo
+                        solo<br>
+                    </div><br>
+                </form>
+            </div>
+</div>
+<div class="row">
+
+        <div align="center"class="column">
+                <button onCLick=" window.location.href='/fill-form' ">Ir a la página 1</button>           
+        </div>
+    
+        <div class="column">
+            <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+            <button type="submit">Guardar</button>
+            <button type="reset">Limpiar Campos</button>
+            </form>
+        </div>
+        
+        <div align="center"class="column">
+                <button onCLick=" window.location.href='/tercera-pagina' ">Ir a la página 3</button>           
+        </div>
+    </div>

@@ -1,0 +1,30 @@
+<h1 align="center">Registro del Censador</h1>
+<div align="center">
+  <img src="https://www.stats.govt.nz/themes/stats/images/logo.svg" height="220" width="400">
+</div>
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+    <label for="uname"><b>Usuario</b></label>
+    <input type="text" formControlName="username">
+    <div *ngIf="submitted && messageForm.controls.username.errors">
+        <div class="alert" *ngIf="messageForm.controls.username.errors.required">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>¡Incorrecto!</strong> Ingrese el nombre de usuario.
+          </div>
+    </div>
+
+    <label for="psw"><b>Contraseña</b></label>
+    <input type="password" formControlName="password">
+    <div *ngIf="submitted && messageForm.controls.password.errors">
+        <div class="alert" *ngIf="messageForm.controls.password.errors.required">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>¡Incorrecto!</strong> Ingrese la contraseña.
+          </div>
+    </div>
+
+  <button type="submit" value="Send message">Login</button>
+  <button value="HelpDesk" onclick="window.open('http://google.com')">HelpDesk </button>
+  <button onCLick=" window.location.href='/' ">Regresar al Inicio</button>
+
+</form>

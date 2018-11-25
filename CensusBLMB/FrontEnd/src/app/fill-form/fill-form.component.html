@@ -1,0 +1,107 @@
+<h1 align="center">Censo de Bolumbia para Habitantes y Viviendas - Página 1</h1>
+<div class="row">
+  <div align="center" class="column">
+    <button onCLick=" window.location.href='/' ">Regresar al Inicio</button>
+  </div>
+  <div align="center" class="column">
+    <img src="https://typography.guru/uploads/monthly_2018_02/Census_StatsNZ_Purple_RGB.png.72094b9dc27e17f141bf83a02581d869.png" height="220" width="400">
+  </div>
+  <div align="center" class="column">
+    <button value="HelpDesk" onclick="window.open('http://google.com')">HelpDesk </button>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="column">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <div class="bloque1">
+          <label for="uname"><p><b>1. Cuál es tu nombre completo?</b></p></label>
+          <p><label for="uname">Nombre  </label>
+          <input formControlName="firstname" placeholder="Ingrese su(s) Nombres" name="uname"></p>
+          <p><label for="uname">Apellido  </label>
+          <input formControlName="lastname" placeholder="Ingrese su(s) Apellidos" name="uname"></p>
+        </div>
+
+        <div class = "bloque1">
+          <label for="uname"><p><b>2. Cuál es tu género?</b></p></label>
+          <select formControlName="gender">
+            <option *ngFor="let gender of genders">{{ gender }}</option>
+          </select>
+        </div>
+
+        <div class = "bloque1">
+          <label for="uname"><p><b>3. Cuándo naciste?</b></p></label>
+          <p><label for="uname">Por favor escribe tu fecha siguiendo este formato: DD/MM/AAAA</label>
+          <input formControlName="birthdate" placeholder="Ingrese su fecha de nacimiento" name="uname" ></p>
+        </div>
+        </form>
+      </div>
+      
+      <div class="column">
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+          <div class="bloque1">
+            <label for="uname"><p><b>4. Dónde vives usualmente?</b></p></label>
+            <p><label for="uname"><p>Por favor escribe tu dirección siguiendo este formato: Tipo de vía - Nombre o 
+                  número de vía - Prefijo o cuadrante - Número de vía generadora - Prefijo o cuadrante de vía generadora - 
+                  Número de placa - Apartamento - Ciudad o Municipio - País  Ejemplo: Calle 34A Sur - 33 Medellín Colombia</p></label>
+            <input formControlName="address" placeholder="Ingrese su dirección" name="uname" ></p>
+          </div>
+          <div class="bloque1">
+            <label for="uname"><p><b>5. Por cuanto tiempo has vivo en la dirección que pusiste en la pregunta 4?</b></p></label>
+            <p><input formControlName="timelivedinaddress" placeholder="Ingrese tiempo en años" name="uname" ></p>
+          </div>
+          <div class="bloque1">
+            <label for="uname"><p><b>6. Dónde vivías usualmente hace 5 años?</b></p></label>
+            <p><label for="uname">Si la persona censada no estaba viva hace 5 años, deja el espacio en blanco</label>
+            <input formControlName="addressfiveyearsago" placeholder="Ingrese su dirección de hace 5 años" name="uname" ></p>
+          </div>
+          <div class="bloque1">
+            <label for="uname"><p><b>7. Dónde vas a residir en el Census Night?</b></p></label>
+            <p><input formControlName="censusnightaddress" placeholder="Ingrese su dirección en Census night" name="uname" ></p>
+          </div>
+          </form>
+      </div>
+
+      <div class="column">
+          <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+              <div class="bloque1">
+                <label for="uname"><p><b>8. En qué país naciste?</b></p></label>
+                <select formControlName="countryofbirth">
+                  <option *ngFor="let country of countries">{{country}}</option>
+                </select>
+              </div>
+              <div class="bloque1">
+                <label for="uname"><p><b>9. Si vives en Bolumbia, pero no naciste acá, responde este pregunta: Cuándo llegaste 
+                  por primera vez a vivir en Bolumbia?</b></p></label>
+                <label for="uname">Ingresa la fecha en este formato: MM/AAAA, Mes es opcional</label>
+                <input formControlName="dateofarrival" placeholder="Ingrese mes y año" name="uname" >
+              </div>
+              
+              <div class="bloque1">
+                <p><label for="uname"><b>10. Cuál es su grupo étnico?</b></label></p>
+                  <input formControlName="ethnicgroup" placeholder="Ingrese su grupo étnico" name="uname" >
+                  <label for="uname"><p><b>Si diste una dirección de Bolumbia en la pregunta 4, pasa a la siguiente página, 
+                    de lo contrario, deja el resto del formulario en blanco</b></p></label>
+              </div>
+          </form>
+      </div>
+
+</div>
+<div class="row">
+
+    <div align="center"class="column">
+      <label>.</label>               
+    </div>
+
+    <div class="column">
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <button type="submit">Guardar</button>
+        <button type="reset">Limpiar Campos</button>
+        </form>
+    </div>
+    
+    <div align="center"class="column">
+        <button onCLick=" window.location.href='/segunda-pagina' ">Ir a la página 2</button>           
+      </div>
+</div>

@@ -1,0 +1,220 @@
+<h1 align="center">Formulario - Cuarta Página</h1>
+
+<div class="row">
+  <div align="center" class="column">
+    <button onCLick=" window.location.href='/' ">Regresar al Inicio</button>
+  </div>
+  <div align="center" class="column">
+    <img src="https://typography.guru/uploads/monthly_2018_02/Census_StatsNZ_Purple_RGB.png.72094b9dc27e17f141bf83a02581d869.png" height="220" width="400">
+  </div>
+  <div align="center" class="column">
+    <button value="HelpDesk" onclick="window.open('http://google.com')">HelpDesk </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column"> 
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">       
+      <div id="P32" class="bloque1">
+        <label><b>32. Marca cuantas opciones necesites para responder esta pregunta. 
+          En los 7 dias que finalizaron el domingo Domingo 3 de Marzo
+          ¿Cuál de las siguientes opciones existes? </b><br> <br>
+        </label>
+        <input formControlName="WIncome" class="Work" type="checkbox" name="WIncome" value="WIncome">Trabajé por un salario, ganancia o ingreso por una hora o más<br>
+        <input formControlName="WFamilia" class="Work" type="checkbox" name="WFamilia" value="WFamilia">Trabajé en una empresa familiar o granja familiar sin paga<br>
+        <input formControlName="WCurrent" class="Work" type="checkbox" name="WCurrent" value="WCurrent">Trabajo en un trabajo, negocio o granja, pero no estuve trabajando la semana pasada por alguna razón<br><br>
+        <label>Si no hizo ninguna de las anteriores<br></label>
+        <input formControlName="WNone" class="NWork" type="checkbox" name="WNone" value="None">Seleciona esta <br><br>
+      </div>
+
+      <div id="P33" class="bloque1">
+        <label><b>33. Responda las 6 siguientes preguntas (34-39)
+          <br>Sobre el trabajo (Por salario, ganancia, ingreso, negocio familiar, o granja)
+          donde más horas trabajaste en esos 7 dias.</b> <br> <br>
+        </label>
+      </div>
+
+      <div id="P34" class="bloque1">
+        <label><b> En ese trabajo, ¿Cuál de estos papeles tenia?</b><br>
+        </label>
+        <input formControlName="RPaid" class="Role" type="checkbox" name="RPaid" value="RPaid">Un empleado pagado<br>
+        <input formControlName="RSelf" class="Role" type="checkbox" name="RSelf" value="RSelf">Independiente y no trabaja para otros<br>
+        <input formControlName="ROwn" class="Role" type="checkbox" name="ROwn" value="ROwn">Un empleador de otra(s) persona(s) en mi propio negocio <br>
+        <input formControlName="RFam" class="Role" type="checkbox" name="RFam" value="RFam">Trabajar en un negocio o granja familiar sin paga<br><br>
+      </div>
+
+      <div id="P35" class="bloque1">
+        <label><b>35. En ese trabajo, ¿Cuál era tu ocupacion? Por ejemplo Profesor de escuela  primara, administrador de motel, recepcionista, etc</b><br>
+        </label>
+        <input formControlName="Ocupa" class="Ocupe" type="text" name="Ocupa" value=""><br><br>
+      </div>
+
+      <div id="P36" class="bloque1">
+        <label><b>36. En ese trabajo, ¿Qué trabajos o deberes gastaste la mayor parte del tiempo  Por ejemplo: Reparar carros, responder telefonos</b><br>
+        </label>
+        <input formControlName="Duty" class="Time" type="text" name="Duty" value=""><br><br>
+      </div>
+
+      <div id="P37" class="bloque1">
+        <label><b>37. Da el nombre completo del negocio o empleador para el que trabajaste en ese trabajo</b><br>
+        </label>
+        <input formControlName="BName" class="Busy" type="text" name="BName" value=""><br><br>
+      </div>
+
+      <div id="P38" class="bloque1">
+        <label><b>38. ¿Cuál es la actividad principal del negocio o empleador? Por ejemplo: <br>Vender zapatos, hacer ropa, etc. </b><br>
+        </label>
+        <input formControlName="AMain" class="Main" type="text" name="AMain" value=""><br><br>
+      </div>
+    </form>
+  </div>
+
+  <div class="column">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+      <div id="P39" class="bloque1">
+        <label><b>39. En ese trabajo, ¿Usted mayormente?</b><br>
+        </label>
+        <input formControlName="AtHome" class="Place" type="checkbox" name="AtHome" value="AtHome">Trabajo en casa<br>
+        <input formControlName="AtWork" class="Place" type="checkbox" name="AtWork" value="AtWork">Trabajo fuera de casa, imprima la direccion completa del lugar<br> donde trabajo mayormente. Incluya si es posible, todos estos:<br><br>
+        <div>
+          <label>- Nombre del edificio</label>
+          <input formControlName="NBusy" class="Busi" type="text" name="NBusy" value=""><br><br>
+          <label>- Numero y nombre de calle, o nombre del centro comercial</label>
+          <input formControlName="SBusy" class="Busi" type="text" name="SBusy" value=""><br><br>
+          <label>- Suburbio o localidad rural</label>
+          <input formControlName="RBusy" class="Busi" type="text" name="RBusy" value=""><br><br>
+          <label>- Municipio de la ciudad o distrito</label>
+          <input formControlName="CBusy" class="Busi" type="text" name="CBusy" value=""><br><br>
+        </div>
+        
+      </div>
+
+      <div id="P40" class="bloque1">
+        <label><b>0. ¿Cuantas horas, aproximadamente, trabaja actualmente cada semana? </b><br><br>
+        </label>
+        <label>* En el trabajo que contesto en las preguntas 34-39:
+        </label>
+        <input formControlName="WHours" class="Hours" type="text" name="WHours" value=""><br><br>
+        <label>* En los otros trabajos(por salario o ganancia o no pagado en un negocio familiar/granja):
+        </label>
+        <input formControlName="OHours" class="Hours" type="text" name="OHours" value=""><br><br>
+      </div>
+
+      <div id="P41" class="bloque1">
+        <label><b>41. El martes 5 de Marzo, en el viaje al trabajo ¿Cómo viajeste en la mayor parte del trayecto?</b>
+          <br>
+        </label>
+        <input formControlName="Home" class="Travel" type="checkbox" name="Home" value="Home">Trabaje en casa<br>
+        <input formControlName="DWork" class="Travel" type="checkbox" name="DWork" value="DWork">No fui a trabajar ese dia<br>
+        <input formControlName="Bus" class="Travel" type="checkbox" name="Bus" value="Bus">Bus publico<br>
+        <input formControlName="Train" class="Travel" type="checkbox" name="Train" value="Train">Tren<br>
+        <input formControlName="Private" class="Travel" type="checkbox" name="Private" value="Private">Conduje un auto, camion o van privada<br>
+        <input formControlName="Company" class="Travel" type="checkbox" name="Company" value="Company">Conduje un auto, camion o van de la compañia<br>
+        <input formControlName="Pass" class="Travel" type="checkbox" name="Pass" value="Pass">De pasajero en un carro, camion o van<br>
+        <input formControlName="CoBus" class="Travel" type="checkbox" name="CoBus" value="CoBus">Bus de la compañia<br>
+        <input formControlName="Moto" class="Trave," type="checkbox" name="Moto" value="Moto">Motocicleta<br>
+        <input formControlName="Cycle" class="Travel" type="checkbox" name="Cycle" value="Cycle">Bicicleta<br>
+        <input formControlName="Walk" class="Travel" type="checkbox" name="Walk" value="Walk">Caminando o trotando<br>
+        <label>Otro, por ejemplo: Taxi, Ferry, Avion.
+            <br>
+          </label>
+        <input formControlName="Other" class="Travel" type="text" name="Other" value=""><br><br>
+      </div>
+
+      <div id="P42" class="bloque1">
+          <label><b>42. Si has respondido preguntas sobre tu trabajo, ve a la pregunta 46 </b><br>
+            <br> Sino, ve a la pregunta 43
+            <br> <br>
+          </label>
+      </div>
+    </form>
+  </div>
+
+  <div class="column">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+      <div id="P43" class="bloque1">
+          <label><b>43. ¿Busco por trabajo pagado en las ultimas 4 semanas?</b><br>
+          </label>
+          <input formControlName="LYes" class="Look" type="checkbox" name="LYes" value="Yes">Si<br>
+          <input formControlName="LNo" class="Look" type="checkbox" name="LNo" value="No">No -> Dirijase a la pregunta 45<br><br>
+        </div>
+
+      <div id="P44" class="bloque1">
+        <label><b>Marca cuantas opciones necesites para mostrar todas las formas en las que buscastes trabajo pagado en las ultimas 4 semanas:</b><br> <br>
+        </label>
+        <input formControlName="WAd" class="WLook" type="checkbox" name="WAd" value="WAd">Busque en anuncios de trabajo<br>
+        <input formControlName="WApply" class="WLook" type="checkbox" name="WApply" value="WApply">Escribí, llame o aplique en persona a un empleador<br>
+        <input formControlName="WContact" class="WLook" type="checkbox" name="WContact" value="WContact">Contacté a Trabajos e Ingresos para buscar un trabajo<br>
+        <input formControlName="WFriends" class="WLook" type="checkbox" name="WFriends" value="WFriends">Contacté amigos o familiares para que me ayudaran a buscar trabajo<br>
+        <input formControlName="WCareer" class="WLook" type="checkbox" name="WCareer" value="WCareer">Contacté con asesores de carrera u oficiales de orientación profesional<br>
+        <input formControlName="WOther" class="WLook" type="checkbox" name="WOther" value="WOther">Otros metodos, por ejemplo:<br>
+              - Contacté otra agencia de empleos<br>
+              - Publiqué un aviso sobre un trabajo<br>
+              - Tomé la iniciativa de crear mi propia compañia<br><br>
+      </div>
+
+      <div id="P45" class="bloque1">
+          <label><b>45. Si un trabajo pagado hubiera estado disponible, ¿Hubiera empezado en la ultima semana?</b><br>
+          </label>
+          <input formControlName="DYes" class="Available" type="checkbox" name="DYes" value="Yes">Si<br>
+          <input formControlName="DNo" class="Available" type="checkbox" name="DNo" value="No">No<br><br>
+      </div>
+
+      <div id="P46" class="bloque1">
+          <label><b>46. Marca cuantas opciones necesites para responder a esta pregunta. En las ultimas 4 semanas, ¿Cuál de estos trabajos realizo, sin ser pagado?</b><br> <br>
+          </label>
+          <input formControlName="NHouse" class="NoPay" type="checkbox" name="NHouse" value="NHouse">Trabajo domestico, cocina, reparaciones, jardineria, etc. Para mi propio hogar<br><br>
+          <input formControlName="NCareH" class="NoPay" type="checkbox" name="NCareH" value="NCareH">Cuidé a un niño que es de un familiar<br><br>
+          <input formControlName="NIllH" class="NoPay" type="checkbox" name="NIllH" value="NIllH">Cuidé de un miembro de mi familia que está enfermo o tiene una discapacidad<br><br>
+          <input formControlName="NCare" class="NoPay" type="checkbox" name="NCare" value="NCare">Cuidé a un niño que es de un familiar (Que NO vive en mi casa)<br><br>
+          <input formControlName="NIll" class="NoPay" type="checkbox" name="NIll" value="NIll">Cuidé de un miembro de mi familia que está enfermo o tiene una discapacidad (Que NO vive en mi casa)<br><br>
+          <input formControlName="NOther" class="NoPay" type="checkbox" name="NOtro" value="NOther">Otra ayuda o trabajo voluntario para o a través de cualquier organización o grupo<br><br>
+          <label>O<br><br></label>
+          <input formControlName="None" class="NonePay" type="checkbox" name="None" value="None">Ninguno de los anteriores<br><br>
+        </div>
+
+        <div id="P47" class="bloque1">
+            <label><b>47. Por favor, de un numero telefonico. Podriamos contactar con usted para consultas sobre el censo del 2018, o si eres seleccionado para una encuesta posterior al censo</b><br><br>
+            </label>
+            <label>Codigo de Area</label>
+            <input formControlName="Area" class="Phone" type="text" name="Area" value=""><br>
+            <label>Telefono</label>
+            <input formControlName="Number" class="Phone" type="text" name="Number" value=""><br><br>
+        </div>
+
+        <div id="P48" class="bloque1">
+          <label class ="bloque2"><b>IMPORTANTE </b><br><br></label>
+          <div class="bloque2">
+            <label><b>Empezando desde la pregunta 2, por favor verifica tus preguntas antes de confirmar. <br>
+            Si la persona la cual es descrita en este formulario es incapaz de confirmar, entonces la persona que lleno el formulario debera hacerlo. <br>
+            Al presionar el boton de confirmar, declara que la información dada es totalmente veridica.</b>
+          </label>
+          </div>
+          
+          
+        </div>
+        
+    </form>
+  </div>
+  
+
+</div>
+<div class="row">
+
+    <div align="center"class="column">
+      <button onCLick=" window.location.href='/tercera-pagina' ">Ir a la página 3</button>           
+    </div>
+
+    <div class="column">
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <button type="save">Guardar</button>
+        <button type="reset">Limpiar campos</button>
+      </form>
+    </div>
+    
+    <div class="column">
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+          <button type="submit">Confirmar</button>
+      </form>
+    </div>
+</div>

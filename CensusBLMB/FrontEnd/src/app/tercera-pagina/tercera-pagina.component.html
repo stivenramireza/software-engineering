@@ -1,0 +1,182 @@
+<h1 align="center">Censo de Bolumbia para Habitantes y Viviendas - Página 3</h1>
+<div class="row">
+    <div align="center" class="column">
+        <button onCLick=" window.location.href='/' ">Regresar al Inicio</button>
+      </div>
+      <div align="center" class="column">
+        <img src="https://typography.guru/uploads/monthly_2018_02/Census_StatsNZ_Purple_RGB.png.72094b9dc27e17f141bf83a02581d869.png" height="220" width="400">
+      </div>
+      <div align="center" class="column">
+        <button value="HelpDesk" onclick="window.open('http://google.com')">HelpDesk </button>
+      </div>
+  </div>
+
+<div class="row">
+
+    <div class="column">
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <div class = "bloque1">
+            <div><b>20. </b></div>
+            <div><label for="uname"><b>Si tienes 15 o más años, dirígete a la pregunta 21. </b></label></div>
+            <div><label for="uname"><b>Si tienes menos de 15 años, dirígete a la pregunta 48. </b></label></div>
+        </div>
+        <div> -</div>
+        <div class = "bloque1">
+            <div><b>21. </b></div>
+            <div><label for="uname"><b>¿Fumas cigarrillos regularmente (uno o más por día)? </b></label></div>
+            <div class ="bloque2"><label for="uname"><b>*No cuente pipas, cigarros o cigarrillos. </b></label></div>
+            <div class="bloque2"><label for="uname"><b>*Sólo cuente tabaco. </b></label></div>
+            <input formControlName="siFumaCheck" class="fumar" type="checkbox" name="siFumaCheck" value="Si">Si<br>
+            <input formControlName="noFumaCheck" class="fumar" type="checkbox" name="noFumaCheck" value="No">No<br>
+        </div>
+        <div> -</div>
+        <div class = "bloque1">
+            <div><b>22. </b></div>
+            <div><label for="uname"><b>¿Alguna vez has visto a un fumador que lo haga uno o más veces por día? </b></label></div>
+            <input formControlName="siRegularSmokerCheck" class="formControlNameomas" type="checkbox" name="siRegularSmokerCheck" value="Si"> Si<br>
+            <input formControlName="noRegularSmokerCheck" class="formControlNameomas" type="checkbox" name="noRegularSmokerCheck" value="No"> No<br>
+        </div>
+        <div> -</div>
+        <div class = "bloque1">
+            <div><b>23. </b></div>
+            <div><label for="uname"><b>¿Cuál de las siguientes situaciones describe mejor tu actual estado civil? </b></label></div>
+            <div class ="bloque2"><label for="uname"><b>Si tienes más de un registro de matrimonio o unión civil, escoge la más reciente.</b></label></div>
+            <input formControlName="marry1Check" class="formControlNameomas" type="checkbox" name="marry1Check" value="Nunca">Nunca he estado casado legalmente y nunca he sido registrado en una unión civil.<br>
+            <input formControlName="marry2Check" class="formControlNameomas" type="checkbox" name="marry2Check" value="Estoy divorciado">Estoy divorciado o mi matrimonio / unión civil ha sido disuelta.<br>
+            <input formControlName="marry3Check" class="formControlNameomas" type="checkbox" name="marry3Check" value="Soy viudo/a">Soy viudo/viuda o sobreviviendo un(a) compañero(a) de unión civil.<br>
+            <input formControlName="marry4Check" class="formControlNameomas" type="checkbox" name="marry4Check" value="Estoy legalmente separado">Estoy legalmente separado de mi esposo/esposa/compañera de unión civil.<br>
+            <input formControlName="marry5Check" class="formControlNameomas" type="checkbox" name="marry5Check" value="Estoy legalmente casado">Estoy legalmente casado.<br>
+            <input formControlName="marry6Check" class="formControlNameomas" type="checkbox" name="marry6Check" value="Estoy legamente en unión civil">Estoy legalmente registrado en una unión civil.<br>
+        </div>
+        <div> -</div>
+        <div class = "bloque1">
+                <div><b>24. </b></div>
+                <div><label for="uname"><b>¿Es usted el propietario de su vivienda? (con o sin hipoteca)</b></label></div>
+                <div class ="bloque2"><label for="uname"><b>Si tienes la vivienda en confianza familiar, selecciona si.</b></label></div>
+                <input formControlName="siViviendaCheck" class="formControlNameomas" type="checkbox" name="siViviendaCheck" value="Si"> Si<br>
+                <input formControlName="noViviendaCheck" class="formControlNameomas" type="checkbox" name="noViviendaCheck" value="No"> No<br>
+        </div>
+        <div> .</div>
+        <div class = "bloque1">
+                <div><b>25. </b></div>
+                <div><label for="uname"><b>Si eres masculino, dirígete a la pregunta 26. </b></label></div>
+                <div><label for="uname"><b>Si eres femenino, responde a esta pregunta: ¿Cuántos hijos has dado a luz? </b></label></div>
+                <div><input formControlName="nroHijos" class="hijos" type="text" name="numeroHijos" value=""><br>Número nacidos vivos</div>
+                <input formControlName="noneCheck" class="formControlNameomas" type="checkbox" name="noneCheck" value="Ninguno">Ninguno.<br>
+                <input formControlName="opongoCheck" class="formControlNameomas" type="checkbox" name="opongoCheck" value="Me opongo a responder esta pregunta">Me opongo a responder esta pregunta.<br>
+            </div>
+    </form>
+    </div>
+
+
+    <div class="column">
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <div class = "bloque1">
+            <div><b>26. </b></div>
+            <div><label for="uname"><b>¿Cuál es tu título más alto de la escuela secundaria?</b></label></div>
+            <input formControlName="titulo1Check" class="formControlNameomas" type="checkbox" name="titulo1Check" value="Ninguno">Ninguno.<br>
+            <input formControlName="titulo2Check" class="formControlNameomas" type="checkbox" name="titulo2Check" value="titulo1">Certificación de la escuela de Nueva Zelanda en una o más carreras o certificación nacional nivel 1 o NCEA nivel 1.<br>
+            <input formControlName="titulo3Check" class="formControlNameomas" type="checkbox" name="titulo3Check" value="titulo1">Certificación del sexto formulario de Nueva Zelanda en una o más carreras o certificación nacional nivel 2 o NZ UE antes de 1986 en una o más carreras o NCEA nivel 2.<br>
+            <input formControlName="titulo4Check" class="formControlNameomas" type="checkbox" name="titulo4Check" value="titulo1">Certificación de la escuela superior o de la universformControlNamead de Nueva Zelanda mediante una beca o certificación nacional nivel 2 o NCEA nivel 3 o becario de Nueva Zelanda.<br>
+            <input formControlName="titulo5Check" class="formControlNameomas" type="checkbox" name="titulo5Check" value="titulo1">Otro título de escuela secundaria alcanzado en Nueva Zelanda. Escribe el nombre: <br>
+            <div><input formControlName="otroTitulo" class="titulos" type="text" name="otroTitulo" value=""><br></div>
+            <input formControlName="titulo6Check" class="formControlNameomas" type="checkbox" name="titulo6Check" value="titulo1">Otro título de escuela secundaria alcanzado en el exterior.<br>
+        </div>
+        <div> .</div>
+        <div class = "bloque1">
+            <div><b>27. </b></div>
+            <div><label for="uname"><b>Aparte de los títulos de la escuela secundaria, ¿has hecho otro título completo?</b></label></div>
+            <div class="bloque2"><label for="uname"><b>*No cuentes títulos que tomaste y sólo tardaron 3 meses. </b></label></div>
+            <input formControlName="siTituloCheck" class="formControlNameomas" type="checkbox" name="siTituloCheck" value="Si"> Si. Dirígete a la pregunta 28.<br>
+            <input formControlName="noTituloCheck" class="formControlNameomas" type="checkbox" name="noTituloCheck" value="No"> No. Dirígete a la pregunta 29.<br>
+        </div>
+        <div> .</div>
+        <div class = "bloque1">
+            <div><b>28. </b></div>
+            <div><label for="uname"><b>Escribe tu mayor título y la carrera, por ejemplo:</b></label></div>
+            <div class="bloque2"><label for="uname"><b>Título: Certificado de Comercio.</b></label></div>
+            <div class="bloque2"><label for="uname"><b>Carrera: Ingeniería Eléctrica.</b></label></div>
+            <div><label for="uname"><b>- Título (y nivel, si aplica). </b></label></div>
+            <div><input formControlName="qualification" class="qualifications" type="text" name="qualification" value=""><br></div>
+            <div><label for="uname"><b>- Carrera.</b></label></div>
+            <div><input formControlName="subject" class="subjects" type="text" name="subject" value=""><br></div>
+        </div>
+        <div> .</div>
+        <div class = "bloque1">
+                <div><b>29. </b></div>
+                <div><label for="uname"><b>¿Estás asistiendo, estudiando o inscrita en una escuela o en cualquier otra parte?</b></label></div>
+                <div class="bloque2"><label for="uname"><b>*No cuentes títulos que tomaste y sólo tardaron 3 meses. </b></label></div>
+                <input formControlName="fullTimeCheck" class="full-timeChecks" type="checkbox" name="fullTimeCheck" value="full">Tiempo completo (20 horas o más a la semana).<br>
+                <input formControlName="parTimeCheck" class="part-timeChecks" type="checkbox" name="parTimeCheck" value="part">Tiempo parcial (menos de 20 horas a la semana).<br>
+                <input formControlName="neitherCheck" class="neithers" type="checkbox" name="neitherCheck" value="neither">Ninguno de estos.<br>
+            </div>
+        </form>
+    </div>
+
+    <div class="column">
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <div class = "bloque1">
+            <div><b>30. </b></div>
+            <div><label for="uname"><b>Marque todos los espacios que necesite para mostrar todas las formas en que obtuvo ingresos en los 12 meses que finalizaron hoy.</b></label></div>
+            <div class ="bloque2"><label for="uname"><b>No cuentes los préstamos porque no son ingresos.</b></label></div>
+            <input formControlName="salario1Check" class="salario1Checks" type="checkbox" name="salario1Check" value="Salario, comisiones, bonificaciones, etc., pagados por mi empleador.">Salario, comisiones, bonificaciones, etc., pagados por mi empleador.<br>
+            <input formControlName="salario2Check" class="salario2Checks" type="checkbox" name="salario2Check" value="Trabajo por cuenta propia, o negocio que poseo y trabajo.">Trabajo por cuenta propia, o negocio que poseo y trabajo.<br>
+            <input formControlName="salario3Check" class="salario3Checks" type="checkbox" name="salario3Check" value="Intereses, divformControlNameendos, alquileres, otras inversiones.">Intereses, divformControlNameendos, alquileres, otras inversiones.<br>
+            <input formControlName="salario4Check" class="salario4Checks" type="checkbox" name="salario4Check" value="Pagos regulares de ACC o una aseguradora privada de entes de trabajo.">Pagos regulares de ACC o una aseguradora privada de entes de trabajo.<br>
+            <input formControlName="salario5Check" class="salario5Checks" type="checkbox" name="salario5Check" value="Pensión de jubilación o de jubilación de Nueva Zelanda.">Pensión de jubilación o de jubilación de Nueva Zelanda.<br>
+            <input formControlName="salario6Check" class="salario6Checks" type="checkbox" name="salario6Check" value="Otra jubilación, pensiones o anualformControlNameades (que no sean la jubilación de Nueva Zelanda, la pensión de veteranos o las pensiones de guerra).">Otra jubilación, pensiones o anualformControlNameades (que no sean la jubilación de Nueva Zelanda, la pensión de veteranos o las pensiones de guerra).<br>
+            <input formControlName="salario7Check" class="salario7Checks" type="checkbox" name="salario7Check" value="Beneficio de desempleo.">Beneficio de desempleo.<br>
+            <input formControlName="salario8Check" class="salario8Checks" type="checkbox" name="salario8Check" value="Prestación por enfermedad.">Prestación por enfermedad.<br>
+            <input formControlName="salario9Check" class="salario9Checks" type="checkbox" name="salario9Check" value="Beneficio de los fines domésticos.">Beneficio de los fines domésticos.<br>
+            <input formControlName="salario10Check" class="salario10Checks" type="checkbox" name="salario10Check" value="Beneficio de inválidos.">Beneficio de inválidos.<br>
+            <input formControlName="salario11Check" class="salario11Checks" type="checkbox" name="salario11Check" value="Asignación de estudiantes.">Asignación de estudiantes.<br>
+            <input formControlName="salario12Check" class="salario12Checks" type="checkbox" name="salario12Check" value="Otros beneficios gubernamentales, pagos de apoyo a los ingresos del gobierno, pensiones de guerra o licencia parental remunerada.">Otros beneficios gubernamentales, pagos de apoyo a los ingresos del gobierno, pensiones de guerra o licencia parental remunerada.<br>
+            <input formControlName="salario13Check" class="salario13Checks" type="checkbox" name="salario13Check" value="Otras fuentes de ingresos, contando los pagos de apoyo de las personas que no viven en mi hogar.">Otras fuentes de ingresos, contando los pagos de apoyo de las personas que no viven en mi hogar.<br>
+            <input formControlName="salario14Check" class="salario14Checks" type="checkbox" name="salario14Check" value="No hay fuente de ingresos durante ese tiempo.">No hay fuente de ingresos durante ese tiempo.<br>
+        </div>
+        <div> .</div>
+        <div class = "bloque1">
+                <div><b>31. </b></div>
+                <div><label for="uname"><b>De todas las fuentes de ingresos que marcó en la pregunta 30, cuál será el ingreso total:</b></label></div>
+                <div><label for="uname"><b>- Que tú mismo tienes.</b></label></div>
+                <div><label for="uname"><b>- Antes de los impuestos o ninguno fue sacado de ellos.</b></label></div>
+                <div><label for="uname"><b>- En los 12 meses que finalizarán el 31 de marzo de 2013.</b></label></div>
+                <div class ="bloque2"><label for="uname"><b>Consulte las notas de la guía "Cero Ingresos" para ayudarlo a calcular sus ingresos.</b></label></div>
+                <input formControlName="ingreso1Check" class="ingreso1Checks" type="checkbox" name="ingreso1Check" value="Pérdida">Pérdida.<br>
+                <input formControlName="ingreso2Check" class="ingreso2Checks" type="checkbox" name="ingreso2Check" value="Cero ingresos">Cero ingresos.<br>
+                <input formControlName="ingreso3Check" class="ingreso3Checks" type="checkbox" name="ingreso3Check" value="$1 – $5,000">$1 – $5,000<br>
+                <input formControlName="ingreso4Check" class="ingreso4Checks" type="checkbox" name="ingreso4Check" value="$5,001 – $10,000">$5,001 – $10,000<br>
+                <input formControlName="ingreso5Check" class="ingreso5Checks" type="checkbox" name="ingreso5Check" value="$10,001 – $15,000">$10,001 – $15,000<br>
+                <input formControlName="ingreso6Check" class="ingreso6Checks" type="checkbox" name="ingreso6Check" value="$15,001 – $20,000">$15,001 – $20,000<br>
+                <input formControlName="ingreso7Check" class="ingreso7Checks" type="checkbox" name="ingreso7Check" value="$20,001 – $25,000">$20,001 – $25,000<br>
+                <input formControlName="ingreso8Check" class="ingreso8Checks" type="checkbox" name="ingreso8Check" value="$25,001 – $30,000">$25,001 – $30,000<br>
+                <input formControlName="ingreso9Check" class="ingreso9Checks" type="checkbox" name="ingreso9Check" value="$30,001 – $35,000">$30,001 – $35,000<br>
+                <input formControlName="ingreso10Check" class="ingreso10Checks" type="checkbox" name="ingreso10Check" value="$35,001 – $40,000">$35,001 – $40,000<br>
+                <input formControlName="ingreso11Check" class="ingreso11Checks" type="checkbox" name="ingreso11Check" value="$40,001 – $50,000">$40,001 – $50,000<br>
+                <input formControlName="ingreso12Check" class="ingreso12Checks" type="checkbox" name="ingreso12Check" value="$50,001 – $60,00">$50,001 – $60,000<br>
+                <input formControlName="ingreso13Check" class="ingreso13Checks" type="checkbox" name="ingreso13Check" value="$60,001 – $70,000">$60,001 – $70,000<br>
+                <input formControlName="ingreso14Check" class="ingreso14Checks" type="checkbox" name="ingreso14Check" value="$70,001 – $100,000">$70,001 – $100,000<br>
+                <input formControlName="ingreso15Check" class="ingreso15Checks" type="checkbox" name="ingreso15Check" value="$100,001 – $150,000">$100,001 – $150,000<br>
+                <input formControlName="ingreso16Check" class="ingreso16Checks" type="checkbox" name="ingreso16Check" value="$150,001 o más.">$150,001 o más.<br>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="row">
+
+    <div align="center"class="column">
+                <button onCLick=" window.location.href='/segunda-pagina' ">Ir a la página 2</button>           
+    </div>
+
+    <div class="column">
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+        <button type="submit">Guardar</button>
+        <button type="reset">Limpiar Campos</button>
+        </form>
+    </div>
+    
+    <div align="center"class="column">
+            <button onCLick=" window.location.href='/cuarta-pagina' ">Ir a la página 4</button>           
+    </div>
+</div>
